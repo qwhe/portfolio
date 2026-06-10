@@ -146,7 +146,6 @@ body {
 }
 .hero-portrait img {
   display: block; width: 100%; height: auto;
-  filter: grayscale(1) contrast(1.04) brightness(0.96);
 }
 .hero-portrait figcaption {
   padding-top: 14px; display: flex; flex-direction: column; gap: 2px;
