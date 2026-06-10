@@ -70,13 +70,3 @@ if (cursor && window.matchMedia('(hover: hover)').matches && !reduceMotion) {
   });
 }
 
-// ---------- 首屏幽灵字视差 ----------
-const ghost = document.querySelector('.hero-ghost');
-if (ghost && !reduceMotion) {
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      ghost.style.transform = `translateY(calc(-58% + ${y * 0.18}px))`;
-    }
-  }, { passive: true });
-}

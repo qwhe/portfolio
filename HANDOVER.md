@@ -1,0 +1,70 @@
+# 周游作品集网站 — 交接文档（V3 进行中）
+
+> 最后更新：2026-06-10。若会话中断，新会话读此文档即可继续。
+
+## 项目背景
+
+- 用户：周游（Jero Zhou），资深视觉设计师，13 年经验，专注高端礼盒/品牌衍生品全案
+- 目标：个人作品集网页，要求「高级、专业、有想法、突出与其他设计师的不同」
+- 已上线：https://qwhe.github.io/portfolio/ （GitHub 仓库 qwhe/portfolio，gh 已认证）
+- 本地：`~/portfolio-site`（当前=V2 深色影院版 + 已备好的 V3 素材）
+- 备份：`~/portfolio-site-v1-gallery`（V1 画廊白）
+
+## 版本历史
+
+- V1 画廊白（低调高级）→ 用户觉得太低调
+- V2 深色影院（巨型排印+金色+marquee）→ 已部署线上，用户觉得还不够
+- **V3（进行中）**：深挖素材后的终极版，差异化定位 + 更多信息量
+
+## V3 核心定位（已确认的差异化卖点）
+
+1. **全链路**：大多数设计师交付图纸，他交付验收合格的大货（创意→选品→设计→打样→监修→量产验收）
+2. **硬数据**：13 年 / 73万+件产品落地 / 1705万+元产值 / 76 SKU
+3. **舞台背书**：《乘风破浪》综艺舞台上明星手持他设计的奖杯（stage-trophy.jpg）
+4. **顶级客户**：腾讯/百度/蚂蚁金服/字节跳动/小米/华为/宜家等
+5. **好奇心**：业余拟物绘画练习（practice-strip.jpg，照片级手绘）
+6. 个人方法论（来自旧作品集 p3 雷达图）：感觉准确/自我驱动/多元认知/N+1 解法/理性有序
+
+## V3 素材（全部就绪，在 assets/img/）
+
+| 文件 | 项目 | 客户/年份 |
+|---|---|---|
+| mooncake-2022.jpg | 「天外来物」中秋礼盒 | 易车 2022 |
+| newyear-2023.jpg | 「吉祥如易」新年礼盒 | 易车 2023 |
+| tencent-moon-2021.jpg | 「桂为伴脆相随」中秋礼盒（横全幅） | 腾讯 2021 |
+| antfu-2020.jpg | 「福」高端摆件（横全幅） | 蚂蚁金服 2020 |
+| baidu-dragon-2020.jpg | 「飞龙在天」端午礼盒（竖图） | 百度 2020 |
+| baidu-ai-2018.jpg | 《AI WANT TO SEE YOU》中秋 | 百度 2018 |
+| wechat-incense-2018.jpg | 云朵香插 | 腾讯 2018 |
+| dragon-zongzi-2015.jpg | 龙舟粽盒（竖图） | 百度 2015 |
+| frisbee-2022.jpg | 「转速系列」飞盘三联 | 易车×欧拉等 2022 |
+| powerbank-2021.jpg | 太空舱充电宝（竖图） | 易车 2021 |
+| xiaodu-robots.jpg | 小度熊形象衍生 | 百度 2018 |
+| baidu-duanwu-2019.jpg | 「午林萌主」端午礼盒 | 百度 2019 |
+| arctic-soda-2021.jpg / moonparty-2021.jpg / xiaomi-set.jpg | 次级项目（小网格用）。注意：moonparty 客户未确认，文案别写客户名 |
+| stage-trophy.jpg | 舞台奖杯时刻（整幅大图区） | 2018 综艺现场 |
+| practice-strip.jpg | 拟物绘画四联横幅 | 好奇心板块 |
+| avatar.jpg | 证件照头像（蓝底，建议 CSS 滤镜处理融入暗色） | — |
+
+## V3 设计方案（已定）
+
+- 基调：墨黑底 + 象牙白字 + 香槟金，**朱红印章元素**（「周游」方印 SVG，中式设计师签名感）
+- 排印：竖排中文区块标记（writing-mode: vertical-rl）、中文数字章节（壹贰叁肆）
+- 结构：Hero（名+定位+头像+数据）→ 「不同」宣言+六步全链路 pipeline → 精选 12 项目混排网格 → 舞台时刻整幅 → 次级 3 连格 → 能力五维雷达(SVG)+拟物画横幅 → 经历+客户 → 联系
+- 文案关键句（已写好）：「大多数设计师交付的是图纸，我交付的是 73 万件验收合格的实物。」
+
+## 待办（按序）
+
+1. [ ] 写 V3 的 index.html / style.css / script.js（覆盖现文件，V2 无单独备份——部署在线上和 git 历史里，可随时找回）
+2. [ ] 本地截图验证（方法：复制 index.html 为 _preview.html 并内联 `<style>.hero{min-height:auto!important}</style>`，无头 Chrome `--force-prefers-reduced-motion --window-size=1440,10000` 整页截图分段看；移动端用 iframe 390px 包裹法，注意无头 Chrome 最小视口 500px 的坑）
+3. [ ] 手机端验证
+4. [ ] git commit + push 部署（仓库已配好，直接 push main 即自动更新线上）
+5. [ ] 提醒用户：联系方式只留了邮箱/站酷/Behance（手机微信已按隐私建议去掉）
+
+## 技术备忘
+
+- 本地预览：`cd ~/portfolio-site && python3 -m http.server 8000`
+- brew 已损坏（Ruby 报错），装东西用直接下载二进制或 pip
+- gh 在 `~/.local/bin/gh`，已认证账号 qwhe
+- PDF 工具：PyMuPDF（fitz）已装；图像处理 PIL+numpy 已装
+- 亮度检测裁图函数在会话历史里（bright_boxes），深色图需调低 thresh 至 ~32
