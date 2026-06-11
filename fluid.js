@@ -53,9 +53,9 @@
     m.depth = 0.25 + Math.random() * 0.75;          // 景深：远小近大
     m.size = (2.5 + Math.random() * 9) * m.depth;
     m.baseA = (0.10 + Math.random() * 0.35) * m.depth;
-    m.vy = -(0.06 + Math.random() * 0.16) * m.depth; // 缓缓上浮
+    m.vy = -(0.075 + Math.random() * 0.20) * m.depth; // 缓缓上浮
     m.swayAmp = 14 + Math.random() * 30;
-    m.swayFreq = 0.0018 + Math.random() * 0.0022;
+    m.swayFreq = 0.0022 + Math.random() * 0.0028;
     m.phase = Math.random() * Math.PI * 2;
     m.twinkleFreq = 0.008 + Math.random() * 0.018;
     m.twinklePhase = Math.random() * Math.PI * 2;
@@ -93,7 +93,7 @@
 
       // 漂浮：上浮 + 正弦左右摇曳
       m.y += m.vy;
-      const sway = Math.sin(t * m.swayFreq * 60 * 0.016 + m.phase) * 0.18 * m.depth;
+      const sway = Math.sin(t * m.swayFreq * 60 * 0.016 + m.phase) * 0.24 * m.depth;
 
       // 指针交互：温柔避让 + 点亮
       let targetOx = 0, targetOy = 0, targetBright = 0;
@@ -115,7 +115,7 @@
       m.x += sway;
 
       // 呼吸般的微闪
-      const twinkle = 0.75 + 0.25 * Math.sin(t * m.twinkleFreq * 60 * 0.016 + m.twinklePhase);
+      const twinkle = 0.70 + 0.30 * Math.sin(t * m.twinkleFreq * 60 * 0.016 + m.twinklePhase);
       const alpha = Math.min(m.baseA * twinkle + m.bright, 0.85);
 
       const px = m.x + m.ox, py = m.y + m.oy;
