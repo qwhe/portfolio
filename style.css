@@ -146,13 +146,19 @@ body {
 }
 .xu-name {
   font-family: var(--serif); font-weight: 900;
-  font-size: clamp(120px, 22vw, 300px); line-height: 1; letter-spacing: 0.08em;
-  text-shadow: 0 0 80px rgba(20,18,15,0.6);
+  font-size: clamp(64px, 11vw, 150px); line-height: 1.15; letter-spacing: 0.18em;
+  text-shadow: 0 0 60px rgba(20,18,15,0.7);
+}
+.xu-en {
+  margin-top: 22px;
+  font-family: var(--serif-en); font-style: italic;
+  font-size: clamp(15px, 1.8vw, 21px); letter-spacing: 0.3em;
+  color: var(--ink-dim);
 }
 .xu-manifesto {
-  margin-top: 44px;
+  margin-top: 48px;
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(19px, 2.6vw, 30px); line-height: 1.8; letter-spacing: 0.08em;
+  font-size: clamp(17px, 2.2vw, 26px); line-height: 1.8; letter-spacing: 0.1em;
 }
 .xu-manifesto em {
   font-style: normal; color: var(--cinnabar);
