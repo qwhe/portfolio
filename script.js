@@ -28,7 +28,6 @@ function animateCount(el) {
   }
   requestAnimationFrame(tick);
 }
-
 const statObserver = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
@@ -42,10 +41,15 @@ const statObserver = new IntersectionObserver(
 );
 document.querySelectorAll('.stat-num[data-count]').forEach((el) => statObserver.observe(el));
 
-// ---------- 导航滚动状态 ----------
+// ---------- 导航滚动状态 + 卷轴进度 ----------
 const nav = document.querySelector('.nav');
+const progressBar = document.querySelector('.progress span');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('is-scrolled', window.scrollY > 10);
+  if (progressBar) {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  }
 }, { passive: true });
 
 // ---------- 自定义光标 ----------
@@ -64,9 +68,8 @@ if (cursor && window.matchMedia('(hover: hover)').matches && !reduceMotion) {
     cursor.style.top = cy + 'px';
     requestAnimationFrame(loop);
   })();
-  document.querySelectorAll('a, .work-media').forEach((el) => {
+  document.querySelectorAll('a, .piece-media, .w-item').forEach((el) => {
     el.addEventListener('mouseenter', () => cursor.classList.add('is-hover'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('is-hover'));
   });
 }
-
