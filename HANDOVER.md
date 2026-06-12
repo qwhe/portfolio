@@ -1,5 +1,14 @@
 # 周游作品集网站 — 交接文档（V4.2 尘海聚字+大版心 已上线）
 
+> **部署（2026-06-12 起双线）**：
+> ① GitHub Pages：https://qwhe.github.io/portfolio/（海外）
+> ② **EdgeOne Pages 国际版：https://zhouyou.edgeone.app/（国内访问主入口）** —— Git 关联 qwhe/portfolio main 分支，
+> push 即两边自动部署。EdgeOne 项目名 zhouyou（makers-xgecoaqnn4qy），账号为腾讯云国际站（edgeone.ai，邮箱注册）。
+> 坑位记录：腾讯国内版 EdgeOne 平台域名只给 3 小时带 eo_token 的预览（合规），公开必须自定义域名+ICP；
+> 国际版「直传/CLI」项目同样仅预览，**只有 Git 导入的项目才有公开默认域名**；国际站控制台顶部「完成注册/绑卡」
+> 横幅不影响使用，绑卡可一直「暂不绑定」。若未来要大陆极速：买域名+ICP 备案后绑到国内版项目即可。
+> 废项目（可删）：国内版 zhouyou-portfolio（makers-gf83a3mmhwuv）、国际版直传 zhouyou-portfolio（makers-jlsn0cwb1thx）。
+
 > **V4.2（2026-06-12）= 当前线上版**：
 > ① 首屏定稿「尘海聚字」（fluid.js）：三维透视尘海（620 颗金尘向镜头涌来，近大远小+景深虚化）+
 > 鼠标视差（近尘大幅移、字层反向微移）+「四时有礼」由约 2800 颗粒子聚成（白字混 12% 金砂、礼字朱砂），
