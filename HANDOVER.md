@@ -1,13 +1,16 @@
 # 周游作品集网站 — 交接文档（V4.2 尘海聚字+大版心 已上线）
 
-> **部署（2026-06-12 起双线）**：
-> ① GitHub Pages：https://qwhe.github.io/portfolio/（海外）
-> ② **EdgeOne Pages 国际版：https://zhouyou.edgeone.app/（国内访问主入口）** —— Git 关联 qwhe/portfolio main 分支，
-> push 即两边自动部署。EdgeOne 项目名 zhouyou（makers-xgecoaqnn4qy），账号为腾讯云国际站（edgeone.ai，邮箱注册）。
-> 坑位记录：腾讯国内版 EdgeOne 平台域名只给 3 小时带 eo_token 的预览（合规），公开必须自定义域名+ICP；
-> 国际版「直传/CLI」项目同样仅预览，**只有 Git 导入的项目才有公开默认域名**；国际站控制台顶部「完成注册/绑卡」
-> 横幅不影响使用，绑卡可一直「暂不绑定」。若未来要大陆极速：买域名+ICP 备案后绑到国内版项目即可。
-> 废项目（可删）：国内版 zhouyou-portfolio（makers-gf83a3mmhwuv）、国际版直传 zhouyou-portfolio（makers-jlsn0cwb1thx）。
+> **部署（2026-06-12 定稿，三线）**：
+> ① **Cloudflare Pages：https://zhouyou-7f9.pages.dev/（国内访问主入口，手机 5G 实测可开）**
+>    —— wrangler 直传（账号 desakey@gmail.com，本机 OAuth 已登录）。**每次 push 后需手动同步**：
+>    `cd ~/portfolio-site && npx wrangler pages deploy . --project-name=zhouyou --branch=main --commit-dirty=true`
+> ② GitHub Pages：https://qwhe.github.io/portfolio/（push main 自动部署，大陆时好时坏）
+> ③ EdgeOne 国际版：https://zhouyou.edgeone.app/（Git 关联自动部署，**仅海外可访问**，大陆网络被 401）
+> 坑位记录：⚠️ 本机挂着 TUN 代理（出口土耳其），**在这台 Mac 上 curl 测不出大陆可达性，必须用手机 5G 实测**。
+> 腾讯国内版 EdgeOne 平台域名只给 3 小时 eo_token 预览（公开须自定义域名+ICP）；国际版 CLI 直传项目同样仅预览，
+> 只有 Git 导入项目有公开默认域名，但对大陆网络主动 401（MLC excluded）。国际站「完成注册/绑卡」横幅可无视。
+> 终极方案（未做）：买域名+ICP 备案，绑国内版 EdgeOne → 大陆极速。
+> 废项目（可删）：腾讯国内版 zhouyou-portfolio、国际版直传 zhouyou-portfolio。
 
 > **V4.2（2026-06-12）= 当前线上版**：
 > ① 首屏定稿「尘海聚字」（fluid.js）：三维透视尘海（620 颗金尘向镜头涌来，近大远小+景深虚化）+
