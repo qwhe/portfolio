@@ -35,7 +35,7 @@ body {
 
 ::selection { background: var(--cinnabar); color: var(--paper-bg); }
 
-.container { max-width: 1240px; margin: 0 auto; padding: 0 56px; }
+.container { max-width: 1500px; margin: 0 auto; padding: 0 56px; }
 
 /* ---------- 墨页 / 纸页 ---------- */
 .ink { background: var(--ink-bg); color: var(--ink-text); }
@@ -95,7 +95,7 @@ body {
   border-bottom-color: var(--ink-line);
 }
 .nav-inner {
-  max-width: 1240px; margin: 0 auto; padding: 18px 56px;
+  max-width: 1500px; margin: 0 auto; padding: 18px 56px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .nav-logo {
@@ -266,6 +266,15 @@ body {
 .piece-meta { font-size: 13px; letter-spacing: 0.12em; color: var(--cinnabar); margin: 8px 0 10px; }
 .piece-desc { font-size: 14.5px; color: var(--paper-dim); max-width: 560px; }
 .piece-pano .piece-info { max-width: 760px; }
+
+/* 全幅横图通栏出血：图到屏幕边缘，文字仍对齐版心 */
+.piece-pano { width: 100vw; margin-left: calc(50% - 50vw); }
+.piece-pano .piece-info {
+  box-sizing: border-box;
+  width: 100%; max-width: 1500px;
+  margin-left: auto; margin-right: auto;
+  padding: 0 56px;
+}
 
 /* ---------- 幕 · 舞台 ---------- */
 .stage { padding: 0; }
@@ -557,6 +566,7 @@ body.modal-open { overflow: hidden; }
   }
   .juan-grid { gap: 56px 0; }
   .piece, .span-4, .span-5, .span-7, .span-12 { grid-column: span 12 !important; }
+  .piece-pano .piece-info { padding: 0 26px; }
 
   .stage-figure img { max-height: none; }
   .stage-figure figcaption { bottom: 26px; }
